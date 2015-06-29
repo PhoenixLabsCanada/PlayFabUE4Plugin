@@ -3,13 +3,14 @@
 
 
 // Play Fab API codes and URLs
-FString UPlayFabRequestProxy::PlayFabURL(TEXT("https://<AppId>.playfabapi.com/"));
-FString UPlayFabRequestProxy::PlayFabLogicURL(TEXT("https://<AppId>.playfablogic.com/"));
-FString UPlayFabRequestProxy::PlayFabAppId(TEXT("<AppId>"));
-FString UPlayFabRequestProxy::PlayFabApiKey(TEXT("<SecretKey>"));
-FString UPlayFabRequestProxy::PhotonRealtimeAppId(TEXT("<SecretKey>"));
-FString UPlayFabRequestProxy::PhotonTurnbasedAppId(TEXT("<SecretKey>"));
-FString UPlayFabRequestProxy::PhotonChatAppId(TEXT("<SecretKey>"));
+FString UPlayFabRequestProxy::PlayFabURL(TEXT("https://2AA2.playfabapi.com/"));
+FString UPlayFabRequestProxy::PlayFabLogicURL(TEXT("https://2AA2.playfablogic.com/"));
+FString UPlayFabRequestProxy::PlayFabAppId(TEXT("2AA2"));
+int32 UPlayFabRequestProxy::CloudScriptVersionInt(1);
+FString UPlayFabRequestProxy::PlayFabApiKey(TEXT("T9OB3ZIX6O6DEXGBF549CB3EGNUNNDMWAQAZ4ZXPWBQQ8D8J45"));
+FString UPlayFabRequestProxy::PhotonRealtimeAppId(TEXT("3fc0093c-e6cd-4017-b54c-ec56f3f0b316"));
+FString UPlayFabRequestProxy::PhotonTurnbasedAppId(TEXT("4d4a86d9-246c-4bde-b92f-139328910c72"));
+FString UPlayFabRequestProxy::PhotonChatAppId(TEXT("a2472e9f-b00f-48ad-8d27-045b7f851214"));
 
 
 UPlayFabRequestProxy* g_proxy = NULL;
@@ -2710,7 +2711,7 @@ UPlayFabRequestProxy* UPlayFabRequestProxy::RunCloudScript(FString SessionTicket
 	// Setup the request variables based on this request
 	manager->PlayFabClass = "RunCloudScript";
 	manager->PlayFabSessionToken = SessionTicket;
-	manager->CloudScriptVersion = "";
+	manager->CloudScriptVersion = FString::FromInt(CloudScriptVersionInt);
 	manager->isAdmin = false;
 	manager->isServer = false;
 	manager->isClient = true;
