@@ -3,13 +3,14 @@
 
 
 // Play Fab API codes and URLs
-FString UPlayFabRequestProxy::PlayFabURL(TEXT("https://<AppId>.playfabapi.com/"));
-FString UPlayFabRequestProxy::PlayFabLogicURL(TEXT("https://<AppId>.playfablogic.com/"));
-FString UPlayFabRequestProxy::PlayFabAppId(TEXT("<AppId>"));
-FString UPlayFabRequestProxy::PlayFabApiKey(TEXT("<SecretKey>"));
-FString UPlayFabRequestProxy::PhotonRealtimeAppId(TEXT("<SecretKey>"));
-FString UPlayFabRequestProxy::PhotonTurnbasedAppId(TEXT("<SecretKey>"));
-FString UPlayFabRequestProxy::PhotonChatAppId(TEXT("<SecretKey>"));
+FString UPlayFabRequestProxy::PlayFabURL(TEXT("https://<>.playfabapi.com/"));
+FString UPlayFabRequestProxy::PlayFabLogicURL(TEXT("https://<>.playfablogic.com/"));
+FString UPlayFabRequestProxy::PlayFabAppId(TEXT(""));
+int32 UPlayFabRequestProxy::CloudScriptVersionInt(1);
+FString UPlayFabRequestProxy::PlayFabApiKey(TEXT(""));
+FString UPlayFabRequestProxy::PhotonRealtimeAppId(TEXT(""));
+FString UPlayFabRequestProxy::PhotonTurnbasedAppId(TEXT(""));
+FString UPlayFabRequestProxy::PhotonChatAppId(TEXT(""));
 
 
 UPlayFabRequestProxy* g_proxy = NULL;
@@ -2710,7 +2711,7 @@ UPlayFabRequestProxy* UPlayFabRequestProxy::RunCloudScript(FString SessionTicket
 	// Setup the request variables based on this request
 	manager->PlayFabClass = "RunCloudScript";
 	manager->PlayFabSessionToken = SessionTicket;
-	manager->CloudScriptVersion = "";
+	manager->CloudScriptVersion = FString::FromInt(CloudScriptVersionInt);
 	manager->isAdmin = false;
 	manager->isServer = false;
 	manager->isClient = true;

@@ -16,7 +16,7 @@ namespace UnrealBuildTool.Rules
             get { return Path.GetFullPath(Path.Combine(ModulePath, "../../ThirdParty/")); }
         }
 
-        public PlayFabPlugin(TargetInfo Target)
+        public PlayFab(TargetInfo Target)
         {
             PrivateIncludePaths.AddRange(
                 new string[] {
@@ -35,6 +35,10 @@ namespace UnrealBuildTool.Rules
                     "OnlineSubsystemUtils"
 					// ... add other public dependencies that you statically link with here ...
 				});
+
         }
+
     }
+
+
 }
