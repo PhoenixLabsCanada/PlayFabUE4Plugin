@@ -31,10 +31,9 @@ namespace ERegion
 #include "OnlineBlueprintCallProxyBase.h"
 #include "PlayFabRequestProxy.generated.h"
 
-
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnPlayFabRequestCompleted, UPlayFabJsonObject*, response, bool, successful);
 
-UCLASS(Blueprintable, BlueprintType)
+UCLASS()
 class UPlayFabRequestProxy : public UOnlineBlueprintCallProxyBase
 {
 	GENERATED_UCLASS_BODY()
@@ -839,7 +838,6 @@ protected:
 	static FString PhotonRealtimeAppId;
 	static FString PhotonTurnbasedAppId;
 	static FString PhotonChatAppId;
-	static int32 CloudScriptVersionInt;
 
 	/** PlayFab URL */
 	static FString PlayFabURL;
