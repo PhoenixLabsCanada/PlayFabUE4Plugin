@@ -3,14 +3,14 @@
 
 
 // Play Fab API codes and URLs
-FString UPlayFabRequestProxy::PlayFabURL(TEXT("https://2AA2.playfabapi.com/"));
-FString UPlayFabRequestProxy::PlayFabLogicURL(TEXT("https://2AA2.playfablogic.com/"));
-FString UPlayFabRequestProxy::PlayFabAppId(TEXT("2AA2"));
+FString UPlayFabRequestProxy::PlayFabURL(TEXT("https://<>.playfabapi.com/"));
+FString UPlayFabRequestProxy::PlayFabLogicURL(TEXT("https://<>.playfablogic.com/"));
+FString UPlayFabRequestProxy::PlayFabAppId(TEXT(""));
 int32 UPlayFabRequestProxy::CloudScriptVersionInt(1);
-FString UPlayFabRequestProxy::PlayFabApiKey(TEXT("T9OB3ZIX6O6DEXGBF549CB3EGNUNNDMWAQAZ4ZXPWBQQ8D8J45"));
-FString UPlayFabRequestProxy::PhotonRealtimeAppId(TEXT("3fc0093c-e6cd-4017-b54c-ec56f3f0b316"));
-FString UPlayFabRequestProxy::PhotonTurnbasedAppId(TEXT("4d4a86d9-246c-4bde-b92f-139328910c72"));
-FString UPlayFabRequestProxy::PhotonChatAppId(TEXT("a2472e9f-b00f-48ad-8d27-045b7f851214"));
+FString UPlayFabRequestProxy::PlayFabApiKey(TEXT(""));
+FString UPlayFabRequestProxy::PhotonRealtimeAppId(TEXT(""));
+FString UPlayFabRequestProxy::PhotonTurnbasedAppId(TEXT(""));
+FString UPlayFabRequestProxy::PhotonChatAppId(TEXT(""));
 
 
 UPlayFabRequestProxy* g_proxy = NULL;
